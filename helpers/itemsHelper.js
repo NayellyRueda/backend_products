@@ -9,7 +9,7 @@ const formatProduct = (product) => {
     },
     picture: `https://http2.mlstatic.com/D_NQ_NP_${product.thumbnail_id}-V.webp`,
     condition: product.condition,
-    free_shipping: product.shipping.free_shipping,
+    free_shipping: product.shipping?.free_shipping,
     state_name: product.address?.state_name,
     sold_quantity: product.sold_quantity,
   };
