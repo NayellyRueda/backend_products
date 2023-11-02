@@ -31,7 +31,7 @@ const findProduct = async (request, response) => {
   const { id } = request.params;
   const { data, status } = await httpClient.get(`${baseUrl}/items/${id}`);
 
-  if (status !== 200) response.status(status).send("Not found");
+  if (status !== 200) return response.status(status).send("Not found");
 
   const {
     data: { plain_text },
